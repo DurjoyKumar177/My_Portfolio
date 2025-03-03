@@ -1,6 +1,6 @@
 import React from "react";
 import Typewriter from "react-typewriter-effect";
-import heroImg from "/myPic_withoutBackground.png"; // Ensure transparent background
+import heroImg from "../assets/myPic_withoutBackground.png"; 
 import { FaLinkedinIn, FaGithub, FaFacebookF } from "react-icons/fa";
 import { SiDjango, SiReact, SiCplusplus } from "react-icons/si";
 
@@ -11,7 +11,7 @@ const Slider = () => {
         {/* Image Section */}
         <img
           src={heroImg}
-          className="max-w-md rounded-lg shadow-2xl object-cover h-[70vh] bg-transparent"
+          className="max-w-md rounded-lg object-cover h-[70vh] bg-transparent"
           alt="Durjoy Kumar"
         />
 

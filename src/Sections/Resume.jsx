@@ -6,60 +6,54 @@ import AOS from 'aos';
 // Data for resume sections
 const educationData = [
   {
-    title: 'Personal Portfolio April Fools',
-    institution: 'University of DVI (1997 - 2001)',
-    score: '4.30/5',
-    description: 'The education should be very interactual. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.',
+    title: 'Bachelor of Science in Computer Science',
+    institution: 'Dhaka City College (2019-2025)',
+    Score: 'Running',
+    Department: 'Computer Science and Engineering',
+    description: 'I am currently pursuing a B.Sc. (Hons) in Computer Science at Dhaka City College, a prestigious institution offering a four-year professional CSE course since 2006 under National University. I actively participate in programming contests like ICPC and NCPC and am an enthusiastic member of the college’s Programming Club.',
   },
   {
-    title: 'Examples Of Personal Portfolio',
-    institution: 'College of Studies (2000 - 2002)',
-    score: '4.50/5',
-    description: 'Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.',
+    title: 'Higher Secondary Certificate',
+    institution: 'Doctor Mahabubur Rahman Mollah College (2017-2019)',
+    score: 'GPA 4.75/5',
+    group: 'Science',
+    description:
+      'Dhaka City College is a prestigious institution that offers excellent education. I completed my HSC from this college and was actively involved in the Science Fair and Science Club during my time there.',
   },
   {
-    title: 'Tips For Personal Portfolio',
-    institution: 'University of Studies (1997 - 2001)',
-    score: '4.80/5',
-    description: 'If you are going to use a passage. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.',
+    title: 'Secondary School Certificate',
+    institution: 'Sinha High School (2015-2017)',
+    score: 'GPA 5/5',
+    group: 'Science',
+    description: 'Sinha High School is the most popular school in our area. I completed my SSC from this school.',
   },
 ];
 
-const jobExperienceData = [
+const certificatesData = [
   {
-    title: 'Diploma in Web Development',
-    institution: 'BSE In CSE (2004 - 2008)',
-    score: '4.70/5',
-    description: 'Contrary to popular belief. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.',
+    title: 'ICPC Onsite Contest Participation Certificate (2021)',
+    institution: 'ICPC 2021',
+    image: '/src/assets/ICPC-2021.jpg',
   },
   {
-    title: 'The Personal Portfolio Mystery',
-    institution: 'Job at Zebra Infotech (2008 - 2025)',
-    score: '4.95/5',
-    description: 'Generate Lorem Ipsum which looks. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.',
-  },
-  {
-    title: 'Diploma in Computer Science',
-    institution: 'Works at Plugin Development (2016 - 2020)',
-    score: '5.00/5',
-    description: 'Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante.',
+    title: 'ICPC Onsite Contest Participation Certificate (2024)',
+    institution: 'ICPC 2024',
+    image: '/src/assets/ICPC-2024.jpg',
   },
 ];
 
-const designSkills = [
-  { skill: 'Photoshop', percentage: 100 },
-  { skill: 'Figma', percentage: 95 },
-  { skill: 'Adobe XD', percentage: 60 },
-  { skill: 'Adobe Illustrator', percentage: 70 },
-  { skill: 'Design', percentage: 90 },
+const FrontendSkills = [
+  { skill: 'HTML', percentage: 85, color: 'bg-blue-500' },
+  { skill: 'CSS', percentage: 80, color: 'bg-green-500' },
+  { skill: 'JavaScript', percentage: 80, color: 'bg-yellow-500' },
+  { skill: 'React', percentage: 90, color: 'bg-purple-500' },
+  { skill: 'Tailwind', percentage: 90, color: 'bg-pink-500' },
 ];
 
-const devSkills = [
-  { skill: 'HTML', percentage: 85 },
-  { skill: 'CSS', percentage: 80 },
-  { skill: 'JavaScript', percentage: 90 },
-  { skill: 'Software', percentage: 75 },
-  { skill: 'Plugin', percentage: 70 },
+const BackendSkills = [
+  { skill: 'Django', percentage: 85, color: 'bg-red-500' },
+  { skill: 'Rest_api', percentage: 80, color: 'bg-indigo-500' },
+  { skill: 'PostgreSQL', percentage: 90, color: 'bg-teal-500' },
 ];
 
 const Resume = () => {
@@ -67,19 +61,20 @@ const Resume = () => {
     AOS.init({ duration: 500, once: true });
   }, []);
 
+  const openImageInNewTab = (image) => {
+    window.open(image, '_blank'); // Open image in a new tab
+  };
+
   return (
     <section id="resume" className="pt-24 pb-16 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-10">
-          <span className="text-gray-500 text-sm uppercase tracking-wider">
-            7+ Years of Experience
-          </span>
           <h2 className="text-4xl font-bold text-gray-800 mt-2">My Resume</h2>
         </div>
 
         {/* Tabs */}
-        <Tabs defaultIndex={3} className="mt-12">
+        <Tabs defaultIndex={0} className="mt-12">
           <TabList className="flex flex-wrap justify-center gap-4 mb-8 border-b border-gray-300">
             <Tab className="px-4 py-2 text-gray-700 hover:text-blue-500 cursor-pointer focus:outline-none" selectedClassName="text-blue-500 border-b-2 border-blue-500">
               Education
@@ -88,52 +83,26 @@ const Resume = () => {
               Professional Skills
             </Tab>
             <Tab className="px-4 py-2 text-gray-700 hover:text-blue-500 cursor-pointer focus:outline-none" selectedClassName="text-blue-500 border-b-2 border-blue-500">
-              Experience
-            </Tab>
-            <Tab className="px-4 py-2 text-gray-700 hover:text-blue-500 cursor-pointer focus:outline-none" selectedClassName="text-blue-500 border-b-2 border-blue-500">
-              Interview
+              Achievements
             </Tab>
           </TabList>
 
           {/* Education Tab */}
           <TabPanel>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-              <div>
-                <span className="text-gray-500 text-sm">2007 - 2010</span>
-                <h4 className="text-2xl font-semibold text-gray-800 mt-2">Education Quality</h4>
-                <div className="mt-4 space-y-6">
-                  {educationData.map((item, index) => (
-                    <div key={index} className="bg-white p-4 rounded-lg shadow-md">
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <h4 className="text-lg font-medium text-gray-800">{item.title}</h4>
-                          <span className="text-gray-600 text-sm">{item.institution}</span>
-                        </div>
-                        <span className="text-blue-500 font-semibold">{item.score}</span>
-                      </div>
-                      <p className="text-gray-600 mt-2">{item.description}</p>
-                    </div>
-                  ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+              {educationData.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow-md relative"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 200}
+                >
+                  <h4 className="text-lg font-medium text-gray-800">{item.title}</h4>
+                  <span className="text-gray-600 text-sm">{item.institution}</span>
+                  {item.score && <span className="text-blue-500 font-semibold block mt-1">{item.score}</span>}
+                  <p className="text-gray-600 mt-2">{item.description}</p>
                 </div>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <span className="text-gray-500 text-sm">2007 - 2010</span>
-                <h4 className="text-2xl font-semibold text-gray-800 mt-2">Job Experience</h4>
-                <div className="mt-4 space-y-6">
-                  {jobExperienceData.map((item, index) => (
-                    <div key={index} className="bg-white p-4 rounded-lg shadow-md">
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <h4 className="text-lg font-medium text-gray-800">{item.title}</h4>
-                          <span className="text-gray-600 text-sm">{item.institution}</span>
-                        </div>
-                        <span className="text-blue-500 font-semibold">{item.score}</span>
-                      </div>
-                      <p className="text-gray-600 mt-2">{item.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
           </TabPanel>
 
@@ -142,14 +111,14 @@ const Resume = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
               <div>
                 <span className="text-gray-500 text-sm">Features</span>
-                <h4 className="text-2xl font-semibold text-gray-800 mt-2">Design Skill</h4>
+                <h4 className="text-2xl font-semibold text-gray-800 mt-2">Frontend Skill</h4>
                 <div className="mt-4 space-y-4">
-                  {designSkills.map((skill, index) => (
+                  {FrontendSkills.map((skill, index) => (
                     <div key={index} className="space-y-1">
                       <h6 className="text-gray-700 font-medium">{skill.skill}</h6>
                       <div className="w-full bg-gray-200 rounded-full h-2.5">
                         <div
-                          className="bg-blue-500 h-2.5 rounded-full animate-fadeInLeft"
+                          className={`${skill.color} h-2.5 rounded-full animate-fadeInLeft`}
                           style={{ width: `${skill.percentage}%` }}
                           data-aos="fade-left"
                           data-aos-delay={index * 100 + 300}
@@ -165,14 +134,14 @@ const Resume = () => {
               </div>
               <div className="mt-10 md:mt-0">
                 <span className="text-gray-500 text-sm">Features</span>
-                <h4 className="text-2xl font-semibold text-gray-800 mt-2">Development Skill</h4>
+                <h4 className="text-2xl font-semibold text-gray-800 mt-2">Backend Skill</h4>
                 <div className="mt-4 space-y-4">
-                  {devSkills.map((skill, index) => (
+                  {BackendSkills.map((skill, index) => (
                     <div key={index} className="space-y-1">
                       <h6 className="text-gray-700 font-medium">{skill.skill}</h6>
                       <div className="w-full bg-gray-200 rounded-full h-2.5 relative">
                         <div
-                          className="bg-blue-500 h-2.5 rounded-full animate-fadeInLeft"
+                          className={`${skill.color} h-2.5 rounded-full animate-fadeInLeft`}
                           style={{ width: `${skill.percentage}%` }}
                           data-aos="fade-left"
                           data-aos-delay={index * 100 + 300}
@@ -189,97 +158,28 @@ const Resume = () => {
             </div>
           </TabPanel>
 
-          {/* Experience Tab */}
+          {/* Achievements Tab */}
           <TabPanel>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-              <div>
-                <span className="text-gray-500 text-sm">2007 - 2010</span>
-                <h4 className="text-2xl font-semibold text-gray-800 mt-2">Education Quality</h4>
-                <div className="mt-4 space-y-6">
-                  {educationData.map((item, index) => (
-                    <div key={index} className="bg-white p-4 rounded-lg shadow-md">
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <h4 className="text-lg font-medium text-gray-800">{item.title}</h4>
-                          <span className="text-gray-600 text-sm">{item.institution}</span>
-                        </div>
-                        <span className="text-blue-500 font-semibold">{item.score}</span>
-                      </div>
-                      <p className="text-gray-600 mt-2">{item.description}</p>
-                    </div>
-                  ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+              {certificatesData.map((certificate, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow-md border border-gray-200"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 200}
+                >
+                  <img
+                    src={certificate.image}
+                    alt={certificate.title}
+                    className="w-full h-auto object-cover rounded-md cursor-pointer"
+                    onClick={() => openImageInNewTab(certificate.image)} // Open image in new tab
+                  />
+                  <span className="inline-block bg-blue-100 text-blue-800 text-sm font-semibold mt-4 px-3 py-1 rounded-full">
+                    {certificate.institution}
+                  </span>
+                  <h4 className="text-lg font-medium text-gray-800 mt-2">{certificate.title}</h4>
                 </div>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <span className="text-gray-500 text-sm">2007 - 2010</span>
-                <h4 className="text-2xl font-semibold text-gray-800 mt-2">Job Experience</h4>
-                <div className="mt-4 space-y-6">
-                  {jobExperienceData.map((item, index) => (
-                    <div key={index} className="bg-white p-4 rounded-lg shadow-md">
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <h4 className="text-lg font-medium text-gray-800">{item.title}</h4>
-                          <span className="text-gray-600 text-sm">{item.institution}</span>
-                        </div>
-                        <span className="text-blue-500 font-semibold">{item.score}</span>
-                      </div>
-                      <p className="text-gray-600 mt-2">{item.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </TabPanel>
-
-          {/* Interview Tab */}
-          <TabPanel>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-              <div>
-                <span className="text-gray-500 text-sm">2007 - 2010</span>
-                <h4 className="text-2xl font-semibold text-gray-800 mt-2">Company Experience</h4>
-                <div className="mt-4 space-y-6">
-                  {educationData.map((item, index) => (
-                    <div
-                      key={index}
-                      className="bg-white p-4 rounded-lg shadow-md"
-                      data-aos="fade-up"
-                      data-aos-delay={index * 200 + 300}
-                    >
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <h4 className="text-lg font-medium text-gray-800">{item.title}</h4>
-                          <span className="text-gray-600 text-sm">{item.institution}</span>
-                        </div>
-                        <span className="text-blue-500 font-semibold">{item.score}</span>
-                      </div>
-                      <p className="text-gray-600 mt-2">{item.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <span className="text-gray-500 text-sm">2007 - 2010</span>
-                <h4 className="text-2xl font-semibold text-gray-800 mt-2">Job Experience</h4>
-                <div className="mt-4 space-y-6">
-                  {jobExperienceData.map((item, index) => (
-                    <div
-                      key={index}
-                      className="bg-white p-4 rounded-lg shadow-md"
-                      data-aos="fade-up"
-                      data-aos-delay={index * 200 + 500}
-                    >
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <h4 className="text-lg font-medium text-gray-800">{item.title}</h4>
-                          <span className="text-gray-600 text-sm">{item.institution}</span>
-                        </div>
-                        <span className="text-blue-500 font-semibold">{item.score}</span>
-                      </div>
-                      <p className="text-gray-600 mt-2">{item.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
           </TabPanel>
         </Tabs>

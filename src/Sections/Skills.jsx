@@ -43,10 +43,10 @@ const Skills = () => {
   const filteredSkills = skillsData.filter(skill => skill.category === activeTab);
 
   return (
-    <section id="skills" className="pt-20 bg-gradient-to-b from-gray-100 to-gray-300 w-full min-h-screen flex items-center justify-center">
+    <section id="skills" className="pt-4 bg-gradient-to-b from-gray-100 to-gray-300 w-full min-h-screen flex items-center justify-center">
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-4">
           <h2 className="text-4xl font-bold text-gray-800 inline border-b-4 border-black pb-2">
             Skills
           </h2>
