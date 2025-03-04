@@ -5,7 +5,7 @@ import { FiHeart, FiArrowUpRight } from "react-icons/fi";
 const portfolioItems = [
   {
     id: 1,
-    image: "/netbill1.png", // Updated path
+    image: "/netbill1.png", 
     category: "DRF Web Application",
     likes: 950,
     title: "NetBill Manager",
@@ -26,7 +26,7 @@ const portfolioItems = [
   },
   {
     id: 2,
-    image: "/Tuition Vault.png", // Updated path
+    image: "/Tuition Vault.png", 
     category: "DRF Web Application",
     likes: 750,
     title: "TuitionVault",
@@ -48,7 +48,7 @@ const portfolioItems = [
   },
   {
     id: 3,
-    image: "/library.png", // Updated path
+    image: "/library.png", 
     category: "Django Web Application",
     likes: 350,
     title: "BookHeaven",

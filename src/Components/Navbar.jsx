@@ -26,7 +26,7 @@ const Navbar = () => {
             to="home"
             smooth={true}
             duration={500}
-            className="flex items-center space-x-2 text-xl font-medium text-gray-900 hover:text-blue-500"
+            className="flex items-center space-x-2 text-xl font-medium text-gray-900 hover:text-blue-500 cursor-pointer"
           >
             <img src={logo} alt="Logo" className="h-10 rounded-full" />
             <span>Durjoy Kumar</span>
@@ -40,7 +40,7 @@ const Navbar = () => {
               to="home"
               smooth={true}
               duration={500}
-              className="px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-300 rounded"
+              className="px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-300 rounded cursor-pointer"
               activeClass="text-blue-500"
             >
               Home
@@ -51,7 +51,7 @@ const Navbar = () => {
               to="skills"
               smooth={true}
               duration={500}
-              className="px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-300 rounded"
+              className="px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-300 rounded cursor-pointer"
               activeClass="text-blue-500"
             >
               Skills
@@ -62,7 +62,7 @@ const Navbar = () => {
               to="portfolio"
               smooth={true}
               duration={500}
-              className="px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-300 rounded"
+              className="px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-300 rounded cursor-pointer"
               activeClass="text-blue-500"
             >
               Portfolio
@@ -73,7 +73,7 @@ const Navbar = () => {
               to="resume"
               smooth={true}
               duration={500}
-              className="px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-300 rounded"
+              className="px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-300 rounded cursor-pointer"
               activeClass="text-blue-500"
             >
               Resume
@@ -84,7 +84,7 @@ const Navbar = () => {
               to="contact"
               smooth={true}
               duration={500}
-              className="px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-300 rounded"
+              className="px-4 py-2 text-gray-700 hover:text-blue-500 hover:bg-gray-300 rounded cursor-pointer"
               activeClass="text-blue-500"
             >
               Contact
@@ -96,7 +96,7 @@ const Navbar = () => {
         <a
           href="/Resume%20of%20Durjoy%20Kumar%20.pdf"
           download="Resume_of_Durjoy_Kumar.pdf"
-          className="hidden lg:block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+          className="hidden lg:block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors cursor-pointer"
         >
           Download CV
         </a>
@@ -104,7 +104,7 @@ const Navbar = () => {
 
       {/* Mobile Menu (Hidden by default, shown when isMenuOpen is true) */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-14 left-0 w-full bg-gray-100/80 backdrop-blur-md shadow-md">
+        <div className="lg:hidden absolute top-14 left-0 w-full bg-gray-100/80 backdrop-blur-md shadow-md cursor-pointer">
           <ul className="flex flex-col space-y-2 p-4">
             <li>
               <Link

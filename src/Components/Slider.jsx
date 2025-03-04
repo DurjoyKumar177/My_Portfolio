@@ -46,13 +46,13 @@ const Slider = () => {
               <div className="flex flex-col items-center lg:items-start gap-4">
                 <span className="text-sm font-semibold text-gray-700">Find Me</span>
                 <div className="flex gap-4">
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="btn btn-circle btn-outline hover:bg-primary hover:text-white transition-colors text-blue-600">
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="btn btn-circle btn-outline hover:bg-primary hover:text-white transition-colors text-blue-600">
                     <FaLinkedinIn size={20} />
                   </a>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="btn btn-circle btn-outline hover:bg-primary hover:text-white transition-colors text-gray-900">
+                  <a href="https://github.com/DurjoyKumar177" target="_blank" rel="noopener noreferrer" className="btn btn-circle btn-outline hover:bg-primary hover:text-white transition-colors text-gray-900">
                     <FaGithub size={20} />
                   </a>
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="btn btn-circle btn-outline hover:bg-primary hover:text-white transition-colors text-blue-700">
+                  <a href="https://www.facebook.com/durjoykumar.sarker.9" target="_blank" rel="noopener noreferrer" className="btn btn-circle btn-outline hover:bg-primary hover:text-white transition-colors text-blue-700">
                     <FaFacebookF size={20} />
                   </a>
                 </div>

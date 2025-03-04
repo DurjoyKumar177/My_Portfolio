@@ -75,10 +75,10 @@ const Contact = () => {
               <a href="#" className="text-gray-600 hover:text-blue-500">
                 <FiLinkedin size={24} />
               </a>
-              <a href="#" className="text-gray-600 hover:text-blue-500">
+              <a href="https://www.facebook.com/durjoykumar.sarker.9" className="text-gray-600 hover:text-blue-500">
                 <FiFacebook size={24} />
               </a>
-              <a href="#" className="text-gray-600 hover:text-blue-500">
+              <a href="https://github.com/DurjoyKumar177" className="text-gray-600 hover:text-blue-500">
                 <FiGithub size={24} />
               </a>
             </div>
