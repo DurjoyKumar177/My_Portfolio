@@ -92,9 +92,10 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Download CV Button */}
+        {/* Download CV Button (Fixed) */}
         <a
-          href="/src/assets/Resume of Durjoy Kumar .pdf"
+          href="/Resume%20of%20Durjoy%20Kumar%20.pdf"
+          download="Resume_of_Durjoy_Kumar.pdf"
           className="hidden lg:block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
         >
           Download CV
@@ -162,7 +163,8 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="/src/assets/Resume of Durjoy Kumar .pdf"
+                href="/Resume%20of%20Durjoy%20Kumar%20.pdf"
+                download="Resume_of_Durjoy_Kumar.pdf"
                 className="block px-4 py-2 bg-blue-500 text-white rounded-lg text-center hover:bg-blue-600 transition-colors"
               >
                 Download CV

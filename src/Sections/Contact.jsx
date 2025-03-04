@@ -85,7 +85,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form Card */}
-          <div className="bg-white rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="600">
+          <div className="bg-white rounded-lg shadow-md p-6" >
             <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4">
               <div>
                 <label htmlFor="contact-name" className="block text-gray-700 font-medium mb-1">

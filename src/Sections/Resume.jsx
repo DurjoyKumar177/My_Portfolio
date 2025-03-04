@@ -33,12 +33,12 @@ const certificatesData = [
   {
     title: 'ICPC Onsite Contest Participation Certificate (2021)',
     institution: 'ICPC 2021',
-    image: '/src/assets/ICPC-2021.jpg',
+    image: '/ICPC-2021.jpg',
   },
   {
     title: 'ICPC Onsite Contest Participation Certificate (2024)',
     institution: 'ICPC 2024',
-    image: '/src/assets/ICPC-2024.jpg',
+    image: '/ICPC-2024.jpg',
   },
 ];
 

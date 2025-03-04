@@ -1,6 +1,6 @@
 import React from "react";
 import Typewriter from "react-typewriter-effect";
-import heroImg from "../assets/myPic_withoutBackground.png"; 
+import heroImg from "/myPic_withoutBackground.png"; 
 import { FaLinkedinIn, FaGithub, FaFacebookF } from "react-icons/fa";
 import { SiDjango, SiReact, SiCplusplus } from "react-icons/si";
 
