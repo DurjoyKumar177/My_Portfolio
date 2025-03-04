@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FiFacebook, FiLinkedin, FiGithub, FiMail, FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
 import emailjs from 'emailjs-com'; // For sending emails
 import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ const Contact = () => {
     email: '',
     message: '',
   });
+  const [alertMessage, setAlertMessage] = useState(null); // For showing alert
 
   useEffect(() => {
     AOS.init({ duration: 500, once: true });
@@ -25,20 +27,22 @@ const Contact = () => {
     // Send email using EmailJS
     emailjs
       .send(
-        'service_5jc251r', //  EmailJS service ID
-        'template_n2qefzj', //  EmailJS template ID
+        'service_5jc251r', // EmailJS service ID
+        'template_n2qefzj', // EmailJS template ID
         formData,
-        'service_5jc251r' //  EmailJS user ID
+        'oyplEiOGy7obUXjPb' // EmailJS user ID
       )
       .then(
         (response) => {
           console.log('Email sent successfully!', response.status, response.text);
-          alert('Message sent successfully!');
+          setAlertMessage({ type: 'success', text: 'Message sent successfully!' });
           setFormData({ name: '', email: '', message: '' }); // Reset form
+          setTimeout(() => setAlertMessage(null), 3000); // Hide alert after 3 seconds
         },
         (error) => {
           console.error('Failed to send email:', error);
-          alert('Failed to send message. Please try again.');
+          setAlertMessage({ type: 'error', text: 'Failed to send message. Please try again.' });
+          setTimeout(() => setAlertMessage(null), 3000); // Hide alert after 3 seconds
         }
       );
   };
@@ -51,6 +55,23 @@ const Contact = () => {
           <h2 className="text-4xl font-bold text-gray-800 mt-2">Get in Touch</h2>
         </div>
 
+        {/* Show Alert Message */}
+        {alertMessage && (
+          <div
+            className={`toast toast-top toast-center z-50 ${alertMessage.type === 'success' ? 'bg-green-500 text-white' : 'bg-red-500 text-white'}`}
+          >
+            <div className={`alert ${alertMessage.type === 'success' ? 'alert-success' : 'alert-error'}`}>
+              {/* Success Icon */}
+              {alertMessage.type === 'success' ? (
+                <FiSend size={24} className="mr-3" />
+              ) : (
+                <FiMail size={24} className="mr-3" />
+              )}
+              <span>{alertMessage.text}</span>
+            </div>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center items-center">
           {/* Contact Info Card */}
           <div className="bg-white rounded-lg shadow-md p-6 border">
@@ -59,7 +80,7 @@ const Contact = () => {
             </div>
             <div className="border-b pb-4 mb-4 flex items-center gap-3">
               <FiMapPin size={24} className="text-blue-500" />
-              <p className="text-gray-600">Kanchpur,Sonagroan,Narayangonj, Bangladesh</p>
+              <p className="text-gray-600">Kanchpur, Sonagroan, Narayangonj, Bangladesh</p>
             </div>
             <div className="border-b pb-4 mb-4 flex flex-col gap-3">
               <div className="flex items-center gap-3">
@@ -85,7 +106,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form Card */}
-          <div className="bg-white rounded-lg shadow-md p-6" >
+          <div className="bg-white rounded-lg shadow-md p-6">
             <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4">
               <div>
                 <label htmlFor="contact-name" className="block text-gray-700 font-medium mb-1">
