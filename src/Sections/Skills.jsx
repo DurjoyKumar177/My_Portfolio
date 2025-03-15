@@ -3,7 +3,6 @@ import { FaPython, FaReact, FaBootstrap, FaHtml5, FaCss3Alt, FaJs, FaDatabase } 
 import { SiDjango, SiTailwindcss, SiMysql, SiPostgresql, SiSqlite, SiPhp, SiArduino, SiCisco, SiFastapi, SiVite } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 import { CgCPlusPlus } from 'react-icons/cg';
-import { DiJava } from 'react-icons/di';
 
 const skillsData = [
   // Backend

@@ -11,7 +11,7 @@ const Slider = () => {
         {/* Image Section */}
         <img
           src={heroImg}
-          className="max-w-md rounded-lg object-cover h-[70vh] bg-transparent"
+          className="max-w-md rounded-lg object-cover md:h-[70vh] h-[40vh] bg-transparent"
           alt="Durjoy Kumar"
         />
 

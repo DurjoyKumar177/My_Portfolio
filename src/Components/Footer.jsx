@@ -12,9 +12,7 @@ const Footer = () => {
         </a>
         <p>
           © {year}. All rights reserved by{' '}
-          <a href="https://themeforest.net/user/zebrainfotech/portfolio" target="_blank" className="link link-primary">
-            Durjoy Kumar
-          </a>.
+           <b>Durjoy Kumar</b> 
         </p>
       </div>
     </footer>
