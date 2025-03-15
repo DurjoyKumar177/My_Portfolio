@@ -49,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contacts" className="pt-24 pb-16 bg-gray-100">
+    <section id="contact" className="pt-12 pb-16 bg-gray-100">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-10">
           <span className="text-gray-500 text-sm uppercase tracking-wider">Contact</span>
