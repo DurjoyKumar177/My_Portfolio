@@ -29,7 +29,7 @@ const Slider = () => {
                   textStyle={{ fontWeight: "bold", fontSize: "inherit", color: "inherit" }}
                   startDelay={500}
                   cursorColor="#3b82f6"
-                  multiText={["a Full Stack Developer.", "a Problem Solver.", "a Backend Developer.", "a Frontend Developer."]}
+                  multiText={["a Full Stack Developer.", "a Problem Solver.", "a Backend Developer."]}
                   multiTextLoop
                   multiTextDelay={2000}
                   typeSpeed={100}
