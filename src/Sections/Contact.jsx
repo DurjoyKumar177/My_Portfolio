@@ -3,6 +3,7 @@ import { FiFacebook, FiLinkedin, FiGithub, FiMail, FiMapPin, FiPhone, FiSend } f
 import emailjs from 'emailjs-com'; // For sending emails
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaDiscord } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -93,7 +94,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex justify-center gap-4">
-              <a href="#" className="text-gray-600 hover:text-blue-500">
+              <a href="https://www.linkedin.com/in/durjoy-kumar/" className="text-gray-600 hover:text-blue-500">
                 <FiLinkedin size={24} />
               </a>
               <a href="https://www.facebook.com/durjoykumar.sarker.9" className="text-gray-600 hover:text-blue-500">
@@ -101,6 +102,9 @@ const Contact = () => {
               </a>
               <a href="https://github.com/DurjoyKumar177" className="text-gray-600 hover:text-blue-500">
                 <FiGithub size={24} />
+              </a>
+              <a href="https://discord.com/users/750024693913747632" className="text-gray-600 hover:text-blue-500">
+                <FaDiscord size={24} />
               </a>
             </div>
           </div>

@@ -8,10 +8,16 @@ const educationData = [
   {
     title: 'Bachelor of Science in Computer Science',
     institution: 'Dhaka City College (2019-2025)',
-    Score: 'Running',
+    score: 'Running',
     Department: 'Computer Science and Engineering',
     description: 'I am currently pursuing a B.Sc. (Hons) in Computer Science at Dhaka City College, a prestigious institution offering a four-year professional CSE course since 2006 under National University. I actively participate in programming contests like ICPC and NCPC and am an enthusiastic member of the college’s Programming Club.',
   },
+  {
+    title: 'Course: CSE Fundamentals with Phitron: Fall 2023',
+    institution: 'Phitron (2023-2024)',
+    score: 'CGPA 3.67/4',
+    Department: 'Software Development',
+    description: 'Completed the CSE Fundamentals with Phitron, strengthening my skills in C, C++, data structures, algorithms, Python, Django, DRF, and web development. Managed 6-8 hours of daily study alongside university coursework, enhancing my problem-solving and technical foundation.',  },
   {
     title: 'Higher Secondary Certificate',
     institution: 'Doctor Mahabubur Rahman Mollah College (2017-2019)',
@@ -31,15 +37,21 @@ const educationData = [
 
 const certificatesData = [
   {
-    title: 'ICPC Onsite Contest Participation Certificate (2021)',
-    institution: 'ICPC 2021',
-    image: '/ICPC-2021.jpg',
+    title: 'CERTIFICATE OF ACHIEVEMENT- CSE Fundamentals With Phitron: Fall 2023',
+    institution: 'Phitron',
+    image: '/Phitron_certificate.jpg',
   },
   {
     title: 'ICPC Onsite Contest Participation Certificate (2024)',
     institution: 'ICPC 2024',
     image: '/ICPC-2024.jpg',
   },
+  {
+    title: 'ICPC Onsite Contest Participation Certificate (2021)',
+    institution: 'ICPC 2021',
+    image: '/ICPC-2021.jpg',
+  },
+   
 ];
 
 const FrontendSkills = [

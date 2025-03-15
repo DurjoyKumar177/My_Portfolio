@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { FiMenu, FiX } from 'react-icons/fi';
-import logo from '/logo.jpg';
+import logo from '/my_logo.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -94,7 +94,7 @@ const Navbar = () => {
 
         {/* Download CV Button (Fixed) */}
         <a
-          href="/Resume%20of%20Durjoy%20Kumar%20.pdf"
+          href="/Resume%20of%20Durjoy%20Kumar.pdf"
           download="Resume_of_Durjoy_Kumar.pdf"
           className="hidden lg:block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors cursor-pointer"
         >
