@@ -33,7 +33,7 @@ const portfolioItems = [
     description:
       "TuitionVault is a web application that helps to manage the tuition system of a small business. It is built with Django Rest Framework and React.",
     delay: 300,
-    ProjectLink: "https://github.com/DurjoyKumar177/TuitionVault_Frontend",
+    ProjectLink: "https://durjoykumar177.github.io/TuitionVault_Frontend/",
     githubLinkFrontend: "https://github.com/DurjoyKumar177/TuitionVault_Frontend",
     githubLinkBackend: "https://github.com/DurjoyKumar177/TuitionVault",
     technologies: [
