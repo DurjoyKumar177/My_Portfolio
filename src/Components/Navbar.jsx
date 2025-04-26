@@ -92,17 +92,17 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Download CV Button (Fixed) */}
+        {/* Download CV Button */}
         <a
-          href="/Resume%20of%20Durjoy%20Kumar.pdf"
-          download="Resume_of_Durjoy_Kumar.pdf"
+          href="/public/CV of Durjoy Kumar.pdf"
+          download="CV of Durjoy Kumar.pdf"
           className="hidden lg:block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors cursor-pointer"
         >
           Download CV
         </a>
       </div>
 
-      {/* Mobile Menu (Hidden by default, shown when isMenuOpen is true) */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="lg:hidden absolute top-14 left-0 w-full bg-gray-100/80 backdrop-blur-md shadow-md cursor-pointer">
           <ul className="flex flex-col space-y-2 p-4">
@@ -163,8 +163,8 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="/Resume%20of%20Durjoy%20Kumar%20.pdf"
-                download="Resume_of_Durjoy_Kumar.pdf"
+                href="/public/CV of Durjoy Kumar.pdf"
+                download="CV of Durjoy Kumar.pdf"
                 className="block px-4 py-2 bg-blue-500 text-white rounded-lg text-center hover:bg-blue-600 transition-colors"
               >
                 Download CV
